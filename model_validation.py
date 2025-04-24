@@ -34,7 +34,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_valid, y_train, y_valid = train_test_split(X, y, random_state=1) # split into training and validation data, it's based on a random number
 melbourne_model_2 = DecisionTreeRegressor(random_state=1) # define model
 melbourne_model_2.fit(X_train, y_train) # fit the model with the train variables
-predicted_values_2 = melbourne_model_2.predict(X_valid) # predict the validation variable
-mean_absolute_error_2 = mean_absolute_error(y_valid, predict_values_2)
+predicted_values_2 = melbourne_model_2.predict(X_valid) # predict the validation features variable
+mean_absolute_error_2 = mean_absolute_error(y_valid, predict_values_2) # valid the predicted values with the validation data
 
 print("MEAN ABSOLUTE ERROR: " + str(mean_absolute_error_2))
