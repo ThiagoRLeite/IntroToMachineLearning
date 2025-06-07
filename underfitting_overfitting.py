@@ -1,8 +1,5 @@
 import pandas as pd
 from sklearn.metrics import mean_absolute_error
-from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.metrics import mean_absolute_error
 from sklearn.tree import DecisionTreeRegressor
 
 def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
@@ -18,6 +15,8 @@ melbourne_data = pd.read_csv(melbourne_file_path) # read data and put it into a 
 y = melbourne_data.Price # select the prediction target
 features = ['Rooms', 'Bathroom', 'Landsize', 'BuildingArea', 'YearBuilt', 'Lattitude', 'Longtitude'] # select the features...
 X = melbourne_data[features] # ... and store them in a variable
+
+from sklearn.model_selection import train_test_split
 
 train_X, val_X, train_y, val_y = train_test_split(X, y,random_state = 0) # split data into training and validation data
 
