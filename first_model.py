@@ -5,7 +5,7 @@ melbourne_data = pd.read_csv(melbourne_file_path) #read data and put it into a D
 
 y = melbourne_data.Price #select the prediction target
 features = ['Rooms', 'Bathroom', 'Landsize', 'Lattitude', 'Longtitude'] #select the features...
-X = melbourne_data.features #...and store it in a variable
+X = melbourne_data[features] #...and store it in a variable
 
 #------------- BUILDING MODEL -------------#
 
