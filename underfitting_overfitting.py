@@ -24,3 +24,6 @@ train_X, val_X, train_y, val_y = train_test_split(X, y,random_state = 0) # split
 for max_leaf_nodes in [5, 50, 500, 5000]: # show MAE using different max_leaf_nodes values
     my_mae = get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y) # call function to get MAE value for differente max_leaf_nodes values
     print("Max leaf nodes: %d  \t\t Mean Absolute Error:  %d" %(max_leaf_nodes, my_mae))
+
+# overfitting: capturing spurious patterns that won't recur in the future, leading to less accurate predictions
+# underfitting: failing to capture relevant patterns, again leading to less accurate predictions
